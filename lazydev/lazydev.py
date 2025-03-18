@@ -71,8 +71,22 @@ def lazy_pull_request(inputVerb="", inputNoun=""):
     
 
     
-def lazy_test_excuse():
-    TODO = "TODO"
+def lazy_test_excuse(reason=None):
+    excuses=["I ran it once, it did not crash.",
+             "I'll add tests later...",
+             "We need to refactor before adding tests.",
+             "I was going to write tests, but {reason}.",
+            "Everything looks runnng, no need for test.",
+            "If it compiles it works.",
+            "Tests make the code slower."
+             ]
+    
+    selected_excuse=random.choice(excuses)
+    if reason:
+        return selected_excuse.format(reason=reason)
+    else: 
+        return selected_excuse.replace("{reason}", "I had more important things to do")
+    #^need a filler for reason input 
     
 def procastionation_tip():
     TODO = "TODO"
