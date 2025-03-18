@@ -35,8 +35,41 @@ def lazy_commit_message(keyword=None):
     else:
         return message
 
-def lazy_pull_request():
-    TODO = "TODO"
+#Generate a pull request title; returns a random PR title or optionally one with given words.
+def lazy_pull_request(inputVerb="", inputNoun=""):
+    verbs = ["added", "fixed", "patched", "created", "refactored", "enhanced", "updated", "implemented", "broke"]
+    nouns = ["feature", "bug", "piece of code", "function", "issue", "something", "everything", "problem"]
+    
+    sentences = [
+        "{verb} a {noun}. Just accept the pull request.",
+        "Just {verb} a {noun}.",
+        "{verb} stuff for a {noun}",
+        "Very insignificant change, {verb} a {noun}.",
+        "{noun} has been {verb}, accept quickly",
+        "Important, please review quickly: {verb} a {noun}",
+        "Critical: {verb} a {noun}",
+        "{verb} {noun} to new version",
+        "{verb} {noun} to align with new version",
+    ]
+    
+    sentence = random.choice(sentences)
+    if (inputVerb == ""):
+        tempverb = random.choice(verbs)
+    else:
+        tempverb = inputVerb
+    if (inputNoun == ""):
+        tempnoun = random.choice(nouns)
+    else:
+        tempnoun = inputNoun
+
+    message = sentence.format(
+        verb = tempverb,
+        noun = tempnoun
+    )
+
+    return message
+    
+
     
 def lazy_test_excuse():
     TODO = "TODO"
@@ -46,3 +79,6 @@ def procastionation_tip():
 
 #print(lazy_commit_message())
 #print(lazy_commit_message("Bugfix"))
+
+#print(lazy_pull_request())
+#print(lazy_pull_request("noun", "verb"))
