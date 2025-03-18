@@ -35,7 +35,7 @@ def lazy_commit_message(keyword=None):
     else:
         return message
 
-#Generate a pull request title; returns a random PR title or optionally one with given words.
+#Generate a pull request title; returns a purely random PR title or one with given words, verb first, noun second.
 def lazy_pull_request(inputVerb="", inputNoun=""):
     verbs = ["added", "fixed", "patched", "created", "refactored", "enhanced", "updated", "implemented", "broke"]
     nouns = ["feature", "bug", "piece of code", "function", "issue", "something", "everything", "problem"]
