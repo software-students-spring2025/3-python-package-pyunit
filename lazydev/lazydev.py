@@ -2,29 +2,38 @@ import random
 
 #Generate a random commit, optionally can include a keyword.
 def lazy_commit_message(keyword=None):
-    adj = ["last-minute", "quick", "weird", "funky", "questionable", "rushed", "lazy", "unessecary", "untested", "unsettling"]
-    verb = ["fixed", "debugged", "patched", "destroyed", "created", "rewrote", "deleted", "commented out", "refactored", "restructured", "hotfixed", "broke"]
+    adj = ["last-minute", "quick", "weird", "funky", "questionable", "rushed", "unessecary", "untested", "unsettling"]
+    verb_act = ["fixed", "debugged", "patched", "created", "rewrote", "deleted", "commented out", "refactored", "restructured", "hotfixed", "broke"]
+    verb_hap = ["crashed", "failed", "froze", "worked", "loaded", "compiled"]
     noun = ["thing", "bug", "piece of code", "function", "loop", "class", "issue", "workaround", "problem", "feature", "line of code", "variable", "data set"]
     
     temps = [
-        "{adj} {verb} a {noun}. Hopefully it works.",
-        "Just {verb} a {noun}. Could be better, could be worse, no telling",
-        "{adj} fix for a {noun} in the code. I'm sure it's fine.",
-        "{verb} a {noun}. I'm sure this will work.",
-        "I think I {verb} a {noun}. But now the code won't run???",
-        "{adj} {verb} a {noun} because the other dev messed up the {noun}.",
-        "Commiting a {noun}, i {verb} it really hard.",
-        "this is a {adj} {noun} that i {verb} in the code.",
-        "{adj} {verb} the code.",
-        "The {noun} was {adj} so I {verb} it.",
-        "This is so {adj}, just accept the pull request.",
+        "a {adj} {noun} was {verb_act}. Hopefully it works.",
+        "Just {verb_act} a {noun}. Could be better, could be worse, no telling",
+        "implented a {noun} fix. It was {adj}, i'm sure it's fine.",
+        "I {verb_act} the {noun}. maybe this will work?",
+        "I think I {verb_act} a {noun}. But now the code won't run???",
+        "This {noun} was {adj}, so I {verb_act} it.",
+        "{verb_act} a {adj} {noun} because the other dev messed up the {noun}.",
+        "Commiting a {noun}, i {verb_act} it really hard.",
+        "this is a {adj} {noun} that i {verb_act} in the code.",
+        "{verb_act} the code.",
+        "The {noun} was {adj} so I {verb_act} it.",
+        "{verb_hap}. No idea why, but here we are.",
+        "The {noun} was {adj}, and it somehow {verb_hap}.",
+        "After some tweaks, the {noun} {verb_hap}. Not sure if that's good or bad.",
+        "I touched the {noun} and it {verb_hap} for some reason?",
+        "it was {adj}, suddenly it {verb_hap}.",
+        "Tried fixing a {noun}, now it just {verb_hap}.",
+        "The {noun} {verb_hap} again... just trust me."
     ]
     
     temp = random.choice(temps)
     
     message = temp.format(
         adj =random.choice(adj),
-        verb=random.choice(verb),
+        verb_hap=random.choice(verb_hap),
+        verb_act=random.choice(verb_act),
         noun=random.choice(noun)
     )
     
@@ -92,7 +101,7 @@ def procastionation_tip():
     TODO = "TODO"
 
 #print(lazy_commit_message())
-#print(lazy_commit_message("Bugfix"))
+print(lazy_commit_message())
 
 #print(lazy_pull_request())
 #print(lazy_pull_request("noun", "verb"))
