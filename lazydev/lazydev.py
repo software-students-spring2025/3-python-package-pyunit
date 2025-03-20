@@ -83,18 +83,16 @@ def lazy_test_excuse(reason=None):
     excuses=["I ran it once, it did not crash.",
              "I'll add tests later...",
              "We need to refactor before adding tests.",
-             "I was going to write tests, but {reason}.",
-            "Everything looks runnng, no need for test.",
+            "Everything looks running, no need for test.",
             "If it compiles it works.",
             "Tests make the code slower."
              ]
+    backup = "I was going to write tests, but {reason}."
     
-    selected_excuse=random.choice(excuses)
     if reason:
-        return selected_excuse.format(reason=reason)
-    else: 
-        return selected_excuse.replace("{reason}", "I had more important things to do")
-    #^need a filler for reason input 
+        return backup.format(reason=reason)
+    else:
+        return random.choice(excuses)
     
 
 def procrastination_tip(keyword=None):
@@ -139,3 +137,4 @@ def procrastination_tip(keyword=None):
 #print(lazy_pull_request())
 #print(lazy_pull_request("noun", "verb"))
 #print(procrastination_tip())
+print(lazy_test_excuse())

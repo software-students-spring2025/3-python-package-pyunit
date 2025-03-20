@@ -110,8 +110,8 @@ def test_excuse_reason():
     reason="My dog ate my code"
     excuse=lazy_test_excuse(reason)
     assert reason in excuse, f"'{reason} should be in the {excuse}'"
-    
-# This is to make sure the reason and excuse is grammatically in checl
+
+# This is to make sure the reason and excuse is grammatically correct
 def test_structured_sentence():
     excuse=lazy_test_excuse()
     assert excuse,"Excuse should not be empty"
