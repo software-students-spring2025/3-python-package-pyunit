@@ -1,3 +1,5 @@
+![Build Status](https://github.com/software-students-spring2025/3-python-package-pyunit/actions/workflows/ci.yml/badge.svg)
+
 # Documentation
 
 The `lazydev` package provides funny and light-hearted tools for developers, including:
