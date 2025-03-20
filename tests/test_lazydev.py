@@ -1,6 +1,6 @@
 import pytest
 
-from lazydev.lazydev import lazy_commit_message, lazy_pull_request, procrastination_tip
+from lazydev.lazydev import lazy_commit_message, lazy_pull_request, procrastination_tip, lazy_test_excuse
 
 #   |-------------------------------|
 #   | Tests for lazy_commit_message |
@@ -95,6 +95,10 @@ def test_procrastination_tip_format():
         assert message[0].isupper(), "message starts with a capital letter"
         assert message[-1] == ".", "message should end with a period"
 
+#   |-------------------------------|
+#   |  Tests for lazy_test_excuse   |
+#   |-------------------------------|
+
 #test if the function returns string 
 def test_excuse_is_not_empty():
     excuse=lazy_test_excuse()
@@ -105,6 +109,7 @@ def test_excuse_reason():
     reason="My dog ate my code"
     excuse=lazy_test_excuse(reason)
     assert reason in excuse, f"'{reason} should be in the {excuse}'"
+    
 # This is to make sure the reason and excuse is grammatically in checl
 def test_structured_sentence():
     excuse=lazy_test_excuse()
