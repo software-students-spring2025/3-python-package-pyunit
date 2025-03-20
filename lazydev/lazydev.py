@@ -106,13 +106,13 @@ def procrastination_tip(keyword=None):
     socials = ["Instagram", "TikTok", "Facebook", "LinkedIn"]
     days = ["Monday's", "Tuesday's", "Wednesday's", "Thursday's", "Friday's", "Saturday's", "Sunday's"]
     tips = [
-        "Go take a walk around your {loc} to relax.",
+        "Go take a walk for {rest} around your {loc} to relax.",
         "Plan to follow the Pomodoro Technique to study for {work} and rest for {rest}. Thinking you will be producitve " + 
         "later helps you procrastinate now.",
-        "Go grab some {snacks}. Snacks help you think... or keep you distracted.",
-        "Grab a drink! I recommend a {drinks}.",
-        "Start scrolling on {socials}! Nothing helps waste more time than social media.",
-        "Check your email... and then ignore them! That is {days} problem."
+        "Go grab some {snacks}. Snacks help you think... or keep you distracted for {rest}.",
+        "Grab a drink! I recommend a {drinks}. You can buy some around your {loc}.",
+        "Start scrolling on {socials}! Nothing helps waste more time than social media (other than eating {snacks}).",
+        "Check your email... and then ignore them! That is {days} problem. Then check your DMs on {socials} and ignore them too."
     ]
 
     sentence = random.choice(tips)
