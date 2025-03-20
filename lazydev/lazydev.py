@@ -97,11 +97,47 @@ def lazy_test_excuse(reason=None):
         return selected_excuse.replace("{reason}", "I had more important things to do")
     #^need a filler for reason input 
     
-def procastionation_tip():
-    TODO = "TODO"
+def procrastination_tip(keyword=None):
+    loc = ["office", "park", "neighborhood", "school", "building", "home"]
+    work = ["45 minutes", "50 minutes", "55 minutes", "1 hour"]
+    rest = ["5 minutes", "10 minutes", "15 minutes"]
+    snacks = ["cheetos", "pringles", "oreos", "cookies"]
+    drinks = ["soda", "coffee", "water", "redbull"]
+    socials = ["Instagram", "TikTok", "Facebook", "LinkedIn"]
+    days = ["Monday's", "Tuesday's", "Wednesday's", "Thursday's", "Friday's", "Saturday's", "Sunday's"]
+    tips = [
+        "Go take a walk around your {loc} to relax.",
+        "Plan to follow the Pomodoro Technique to study for {work} and rest for {rest}. Thinking you will be producitve " + 
+        "later helps you procrastinate now.",
+        "Go grab some {snacks}. Snacks help you think... or keep you distracted.",
+        "Grab a drink! I recommend a {drinks}.",
+        "Start scrolling on {socials}! Nothing helps waste more time than social media.",
+        "Check your email... and then ignore them! That is {days} problem."
+    ]
+
+    sentence = random.choice(tips)
+    
+    message = sentence.format(
+        loc = random.choice(loc),
+        work = random.choice(work),
+        rest = random.choice(rest),
+        snacks = random.choice(snacks),
+        drinks = random.choice(drinks),
+        socials = random.choice(socials),
+        days = random.choice(days)
+    )
+    
+    final_message = f"{keyword}: {message}"
+    
+    if keyword:
+        return final_message
+    else:
+        return message
 
 #print(lazy_commit_message())
-print(lazy_commit_message())
+#print(lazy_commit_message())
 
 #print(lazy_pull_request())
 #print(lazy_pull_request("noun", "verb"))
+
+print(procrastination_tip())
