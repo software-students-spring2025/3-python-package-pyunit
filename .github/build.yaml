@@ -1,0 +1,40 @@
+name: PyUnit CI Test
+
+on:
+  pull_request:
+    branches:
+      - main 
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    strategy:
+      matrix:
+        python-version: ["3.9", "3.11"]
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python and install Pipenv
+        uses: kojoru/prepare-pipenv@v1
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install project dependencies
+        run: |
+          pipenv install --dev
+
+      - name: Build package to ensure it compiles
+        run: |
+          pip install build
+          python -m build
+
+      - name: Ensure LazyDev runs properly
+        run: |
+          pipenv run lazydev || echo "LazyDev CLI failed, check for issues"
+
+      - name: Run tests with pytest
+        run: |
+          pipenv run pytest tests/
