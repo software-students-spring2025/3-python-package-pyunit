@@ -4,10 +4,10 @@
 
 The `lazydev` package provides funny and light-hearted tools for developers, including:
 
-- Randomly generated commit messages
-- Auto-generated pull request titles
-- Creative excuses for not writing tests
-- Handy procrastination tips
+- Randomly generated commit messages.
+- Auto-generated pull request titles.
+- Creative excuses for not writing tests.
+- Handy procrastination tips.
 
 ## Installation
 
