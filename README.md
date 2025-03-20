@@ -89,7 +89,7 @@ BREAK TIME: Grab a drink! I recommend a coffee. You can buy some around your nei
 ```
 
 ## Example Program
-For a complete example that uses all the functions, check out this example script: 🔗[lazydev_example.py]("https://github.com/software-students-spring2025/3-python-package-pyunit/blob/main/lazydev_example")
+For a complete example that uses all the functions, check out this example script: 🔗[lazydev_example.py](https://github.com/software-students-spring2025/3-python-package-pyunit/blob/main/lazydev_example)
 ```
 from lazydev import lazy_commit_message, lazy_pull_request, lazy_test_excuse, procrastination_tip
 
@@ -153,10 +153,10 @@ pip install -e .
 You have successfully contributed your modifications and changes to our package! Thank you for submitting your work!
 
 ## Team Members
-[Mahmoud Shehata]("https://github.com/MahmoudS1201") <br /> 
-[Syed Naqvi]("https://github.com/syed1naqvi") <br />
-[Brandon Morales]("https://github.com/BAMOEQ") <br />
-[David Yu]("https://github.com/DavidYu00")
+[Mahmoud Shehata](https://github.com/MahmoudS1201) <br /> 
+[Syed Naqvi](https://github.com/syed1naqvi) <br />
+[Brandon Morales](https://github.com/BAMOEQ) <br />
+[David Yu](https://github.com/DavidYu00)
 
 ## License
-This project is licensed under the MIT License. See the [LICENSE]("https://github.com/software-students-spring2025/3-python-package-pyunit/blob/main/LICENSE") file for details.
+This project is licensed under the MIT License. See the [LICENSE](https://github.com/software-students-spring2025/3-python-package-pyunit/blob/main/LICENSE) file for details.
