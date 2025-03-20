@@ -1,0 +1,29 @@
+from lazydev.lazydev import lazy_commit_message, lazy_pull_request, procrastination_tip, lazy_test_excuse
+
+#   |----------------------------------|
+#   | Examples for lazy_commit_message |
+#   |----------------------------------|
+print(lazy_commit_message())                                    # generate a random commit message
+print(lazy_commit_message("BUGFIX"))                            # generate a commit message with a keyword
+
+
+#   |----------------------------------|
+#   |  Examples for lazy_pull_request  |
+#   |----------------------------------|
+print(lazy_pull_request())                                      # generate a random pull request title for github
+print(lazy_pull_request("refactored", "database queries"))      # generate a pull request title with a custom verb and noun
+
+
+
+#   |----------------------------------|
+#   |  Examples for lazy_test_excuse   |
+#   |----------------------------------|
+print(lazy_test_excuse())                                       # generate a random test excuse
+print(lazy_test_excuse("the server went down"))                 # generate a test excuse with a specific reason
+
+
+#   |----------------------------------|
+#   | Examples for procrastination_tip |
+#   |----------------------------------|
+print(procrastination_tip())                                    # generate a random procrastination tip
+print(procrastination_tip("STUDY BREAK"))                       # generate a procrastination tip with a keyword

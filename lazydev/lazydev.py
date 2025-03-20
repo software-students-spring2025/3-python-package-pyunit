@@ -79,7 +79,6 @@ def lazy_pull_request(inputVerb="", inputNoun=""):
     return message
     
 
-    
 def lazy_test_excuse(reason=None):
     excuses=["I ran it once, it did not crash.",
              "I'll add tests later...",
@@ -97,6 +96,7 @@ def lazy_test_excuse(reason=None):
         return selected_excuse.replace("{reason}", "I had more important things to do")
     #^need a filler for reason input 
     
+
 def procrastination_tip(keyword=None):
     loc = ["office", "park", "neighborhood", "school", "building", "home"]
     work = ["45 minutes", "50 minutes", "55 minutes", "1 hour"]

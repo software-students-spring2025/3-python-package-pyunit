@@ -5,6 +5,7 @@ from lazydev.lazydev import lazy_commit_message, lazy_pull_request, procrastinat
 #   |-------------------------------|
 #   | Tests for lazy_commit_message |
 #   |-------------------------------|
+
 #Ensures Keyword is in the commit message when added
 def test_commit_keyword():
     keyword = "keyword"
