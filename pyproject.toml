@@ -3,9 +3,9 @@ requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "lazydev"
+name = "lazydev_pyunit"
 description = "A lazy commit message, pull request, excuse and procrastination generator for lazy devs with automated build and test workflows."
-version = "1.0.0"
+version = "2.0.0"
 authors = [
     { name = "Mahmoud Shehata", email = "Mss9253@nyu.edu" },
     { name = "Syed Naqvi", email = "san7576@nyu.edu" },
