@@ -10,6 +10,13 @@ The `lazydev` package provides funny and light-hearted tools for developers, inc
 - Handy procrastination tips
 
 ## Installation
+
+### Running on Any Platform
+Windows: Use PowerShell, ensure `pip` and `git` are installed. <br />
+macOS: Use Terminal, ensure `brew` or `pip` is updated. <br />
+Linux: Use `bash`, ensure `python3` and `pipenv` are installed.
+
+### Package
 To install our package, simply run:
 ```
 pip install lazydev
