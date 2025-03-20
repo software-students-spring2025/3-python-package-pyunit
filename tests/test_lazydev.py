@@ -117,4 +117,3 @@ def test_structured_sentence():
     assert excuse,"Excuse should not be empty"
     assert excuse[0].isupper(),f"Excuse should start with a capital letter: {excuse}"
     assert excuse[-1] in {".", "!"}
-
