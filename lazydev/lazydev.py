@@ -137,7 +137,7 @@ def procrastination_tip(keyword=None):
 #print(lazy_commit_message())
 #print(lazy_commit_message())
 
-#print(lazy_pull_request())
+print(lazy_pull_request())
 #print(lazy_pull_request("noun", "verb"))
 
-print(procrastination_tip())
+#print(procrastination_tip())
