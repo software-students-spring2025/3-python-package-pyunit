@@ -10,6 +10,13 @@ The `lazydev` package provides funny and light-hearted tools for developers, inc
 - Handy procrastination tips
 
 ## Installation
+
+### Running on Any Platform
+Windows: Use PowerShell, ensure `pip` and `git` are installed. <br />
+macOS: Use Terminal, ensure `brew` or `pip` is updated. <br />
+Linux: Use `bash`, ensure `python3` and `pipenv` are installed.
+
+### Package
 To install our package, simply run:
 ```
 pip install lazydev
@@ -111,13 +118,6 @@ cd lazydev
 ```
 
 ### 2. Set Up a Virtual Environment
-One method you can use is:
-```
-python -m venv venv
-source venv/bin/activate  # on macOS/Linux
-venv\Scripts\activate     # on Windows
-```
-Another method you can use is:
 ```
 pip3 install pipenv       # install pipenv
 pipenv shell              # run the shell
@@ -126,18 +126,19 @@ python                    # enter the shell
 
 ### 3. Install Dependencies
 ```
-pip install -r requirements.txt
+pipenv install --dev
 ```
 
 ### 4. Run Tests
 Ensure everything works before making changes:
 ```
-pytest tests/
+pipenv run pytest tests/
 ```
 
 ### 5. Build the Package
 ```
-python setup.py sdist bdist_wheel
+pip install build
+python -m build
 ```
 
 ### 6. Install Locally for Development
