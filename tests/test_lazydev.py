@@ -117,3 +117,8 @@ def test_structured_sentence():
     assert excuse,"Excuse should not be empty"
     assert excuse[0].isupper(),f"Excuse should start with a capital letter: {excuse}"
     assert excuse[-1] in {".", "!"}
+
+# remove duplicates by running methods 10 times and confirming if any excuses are
+def test_excuse_variability():
+    excuses = {lazy_test_excuse() for _ in range(10)}
+    assert len(excuses) > 1, "Excuses should not be identical across multiple calls"
