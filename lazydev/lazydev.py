@@ -133,3 +133,11 @@ def procrastination_tip(keyword=None):
         return final_message
     else:
         return message
+
+#print(lazy_commit_message())
+#print(lazy_commit_message())
+
+print(lazy_pull_request())
+#print(lazy_pull_request("noun", "verb"))
+
+#print(procrastination_tip())

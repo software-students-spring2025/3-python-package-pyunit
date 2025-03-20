@@ -96,9 +96,9 @@ def test_procrastination_tip_format():
         assert message[0].isupper(), "message starts with a capital letter"
         assert message[-1] == ".", "message should end with a period"
 
-#   |--------------------------------|
-#   |   Tests for lazy_test_excuse   |
-#   |--------------------------------|
+#   |-------------------------------|
+#   |  Tests for lazy_test_excuse   |
+#   |-------------------------------|
 
 #test if the function returns string 
 def test_excuse_is_not_empty():
